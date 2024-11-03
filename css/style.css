@@ -1,0 +1,484 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f5f5f5;
+  color: #4e4e4e;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.home {
+  background-image: url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.nav {
+  background: rgba(0, 0, 0, 0.9) !important;
+  padding: 12px;
+}
+.nav .navbar-brand {
+  font-weight: 600;
+}
+.nav * {
+  color: white;
+}
+.nav .nav-link:hover {
+  color: white;
+}
+
+.nav .nav-link.active {
+  color: white !important;
+}
+.drop a {
+  color: black !important;
+}
+.get_dark {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+}
+body:not(body:has(:target)) li a[href="#home"],
+body:has(.about:target) li a[href="#about"],
+body:has(.services:target) li a[href="#services"],
+body:has(.work:target) li a[href="#work"],
+body:has(.blog:target) li a[href="#blog"],
+body:has(.contact:target) li a[href="#contact"] {
+  color: white;
+}
+
+body:not(body:has(:target)) li a[href="#home"]::before,
+body:has(.home:target) li a[href="#home"]::before,
+body:has(.about:target) li a[href="#about"]::before,
+body:has(.services:target) li a[href="#services"]::before,
+body:has(.work:target) li a[href="#work"]::before,
+body:has(.blog:target) li a[href="#blog"]::before,
+body:has(.contact:target) li a[href="#contact"]::before {
+  width: 60%;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  width: 0px;
+  height: 2px;
+  background-color: white;
+  transition: width 500ms;
+}
+.nav-link:hover::before,
+.nav-link .active::before {
+  width: 80%;
+}
+/* home_content */
+.home_content {
+  height: 95vh;
+}
+.home_content h1 {
+  font-size: 4.5rem;
+}
+.home_content h2::after {
+  content: "";
+  animation: type 5s infinite;
+}
+@keyframes type {
+  1% {
+    content: "De|";
+  }
+  4% {
+    content: "Dev|";
+  }
+  6% {
+    content: "Deve|";
+  }
+  8% {
+    content: "Devel|";
+  }
+  10% {
+    content: "Develo|";
+  }
+  12% {
+    content: "Develop|";
+  }
+  14% {
+    content: "Develope|";
+  }
+  16% {
+    content: "Developer|";
+  }
+  18% {
+    content: "Developer|";
+  }
+  20% {
+    content: "Develope|";
+  }
+  22% {
+    content: "Develop|";
+  }
+  24% {
+    content: "Develo|";
+  }
+  26% {
+    content: "Devel|";
+  }
+  28% {
+    content: "Deve|";
+  }
+  30% {
+    content: "Dev|";
+  }
+  32% {
+    content: "De|";
+  }
+  34% {
+    content: "D|";
+  }
+  36% {
+    content: "D|";
+  }
+  38% {
+    content: "De|";
+  }
+  40% {
+    content: "Des|";
+  }
+  42% {
+    content: "Desi|";
+  }
+  44% {
+    content: "Desig|";
+  }
+  46% {
+    content: "Design|";
+  }
+  48% {
+    content: "Designe|";
+  }
+  50% {
+    content: "Designer|";
+  }
+  52% {
+    content: "Designer|";
+  }
+  54% {
+    content: "Designe|";
+  }
+  56% {
+    content: "Design|";
+  }
+  58% {
+    content: "Desig|";
+  }
+  60% {
+    content: "Desi|";
+  }
+  62% {
+    content: "Des|";
+  }
+  64% {
+    content: "De|";
+  }
+  66% {
+    content: "D|";
+  }
+  68% {
+    content: "D|";
+  }
+  70% {
+    content: "De|";
+  }
+  72% {
+    content: "Des|";
+  }
+  74% {
+    content: "Desi|";
+  }
+  76% {
+    content: "Desig|";
+  }
+  78% {
+    content: "Design|";
+  }
+  80% {
+    content: "Designe|";
+  }
+  82% {
+    content: "Designer|";
+  }
+  84% {
+    content: "Designer|";
+  }
+  86% {
+    content: "Designe|";
+  }
+  88% {
+    content: "Design|";
+  }
+  90% {
+    content: "Desig|";
+  }
+  92% {
+    content: "Desi|";
+  }
+  94% {
+    content: "Des|";
+  }
+  96% {
+    content: "De|";
+  }
+  100% {
+    content: "D|";
+  }
+}
+/* about section */
+
+.about_container {
+  margin-block: 4rem;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  z-index: 2;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.title-left:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #0078ff;
+  width: 100px;
+  bottom: -12px;
+}
+/* about section */
+.line-mf {
+  width: 40px;
+  height: 5px;
+  background-color: #0078ff;
+  margin: 0 auto;
+}
+/* services section */
+.service-box .service-ico {
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+.service-box .ico-circle {
+  transition: all 500ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ico-circle {
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1.55;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px #0078ff;
+  display: block;
+}
+.service-box:hover .ico-circle {
+  transition: all 500ms ease;
+  color: #fff;
+  background-color: #0078ff;
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+.service-box {
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* section mf */
+.mf {
+  height: 50vh;
+  background-image: url(../images/post-3.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  height: fit-content;
+  padding-block: 70px;
+}
+.overlay-mf {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+.overlay-mf {
+  background-color: #0078ff;
+}
+.counter-box {
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 577px) {
+  .counter-box {
+    margin-bottom: 1.8rem;
+  }
+}
+
+.counter-ico {
+  margin-bottom: 1rem;
+}
+
+.counter-ico .ico-circle {
+  height: 60px;
+  width: 60px;
+  line-height: 1.5;
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.counter-num .counter {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+/* work */
+.circle {
+  width: 50px; /* Circle diameter */
+  height: 50px; /* Circle diameter */
+  border: 3px solid #0078ff; /* Blue border */
+  border-radius: 50%; /* Makes the div a circle */
+  background-color: transparent; /* Background color */
+}
+.work_card {
+  backface-visibility: hidden;
+}
+.work_card img {
+  transition: all 500ms ease-in-out;
+}
+.work_card:hover img {
+  transform: scale(1.1);
+}
+.circle i {
+  color: #0078ff;
+  scale: 1.2;
+}
+.card-text > span {
+  color: #0078ff;
+}
+/* swap cards */
+.swap_cards {
+  height: 60vh;
+  background-image: url(../images/overlay-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+.overlay-mf {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+.overlay-mf {
+  background-color: #0078ff;
+}
+.swap_card {
+  margin-top: 150px;
+  transform: translateX(-75px);
+}
+.swap_card p {
+  transform: translateX(-20px);
+}
+.swap_card h5 {
+  transform: translateX(-20px);
+}
+.morgan_hover {
+  cursor: pointer;
+}
+.morgan_hover:hover {
+  color: #0078ff;
+}
+.blog_title {
+  cursor: pointer;
+}
+.blog_title:hover {
+  color: #0078ff;
+}
+.Travel::before {
+  content: "Travel";
+  background-color: #0078ff;
+  border-radius: 4px;
+  padding: 0 15px 5px;
+  color: #fff;
+  width: fit-content;
+  left: 40%;
+  top: -7%;
+  position: absolute;
+}
+.Web_Design::before {
+  content: "Web Design";
+  background-color: #0078ff;
+  border-radius: 4px;
+  padding: 0 15px 5px;
+  color: #fff;
+  width: fit-content;
+  left: 35%;
+  top: -7%;
+  position: absolute;
+}
+/* contact */
+.contact {
+  height: 80vh;
+  background-image: url(../images/overlay-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+.overlay-mf {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+.form-title:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #0078ff;
+  width: 100px;
+  bottom: -12px;
+}
+
+.form-s-icon i {
+  color: #0078ff;
+}
+.form-s-icon span {
+  padding-right: 20px;
+}
+.form-s-icon {
+  margin-bottom: 10px;
+}
+.links i {
+  color: #1e1e1e;
+}
+.links:hover {
+  background-color: #0078ff;
+  box-shadow: 0 0 0 4px #cde1f8;
+}
+.links:hover i {
+  color: white;
+}
+footer {
+  height: 13vh;
+  color: white;
+  background-color: #0062d3;
+}
